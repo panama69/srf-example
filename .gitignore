@@ -73,5 +73,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# Added by flynn
 RunResults/
 target/
+.idea/
