@@ -58,3 +58,6 @@ To have maven package up your tests correctly in to a jar file that StormRunner 
 ```
 
 If you wish to change the name that is being appended to the jar file from "jar-with-dependencies", edit the line in the pom which has the tag \<descriptorRef\>
+
+### Adding UFT Pro(LeanFT) jar files to local .m2
+Review the commands for Mac, Linux and Window on the [Wiki](/srf-example/wiki)
