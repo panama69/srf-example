@@ -4,11 +4,7 @@ import static org.junit.Assert.*;
 
 import com.hp.lft.sdk.web.BrowserFactory;
 import com.hp.lft.sdk.web.BrowserType;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import com.hp.lft.sdk.*;
 import com.hp.lft.sdk.web.*;
 import com.hp.lft.verifications.*;
@@ -44,6 +40,11 @@ public class LeanFtTest extends UnitTestClassBase {
     public void test() throws GeneralLeanFtException {
         Browser browser = BrowserFactory.launch(BrowserType.CHROME);
         browser.navigate("http://www.advantageonlineshopping.com");
+        Link tABLETSLink = browser.describe(Link.class, new LinkDescription.Builder()
+                .innerText("TABLETS")
+                .tagName("SPAN").build());
+        Verify.areEqual("TABLETS", tABLETSLink.getInnerText());
+        Assert.assertEquals("My tst", "TABLETS", tABLETSLink.getInnerText());
         browser.closeAllTabs();
     }
 

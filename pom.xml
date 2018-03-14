@@ -2,8 +2,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.mf</groupId>
-    <artifactId>simple</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>srf-example</artifactId>
+    <version>0.1</version>
     <name>LeanFT JUnit Test</name>
     <description>LeanFT JUnit Test</description>
 
@@ -53,7 +53,7 @@
     </repositories>
 
     <build>
-        <testSourceDirectory>src/main/java</testSourceDirectory>
+        <!--testSourceDirectory>src/main/java</testSourceDirectory-->
         <plugins>
             <plugin>
                 <!-- This plugin is key to create a LFT Maven project to have the jar file
