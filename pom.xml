@@ -7,35 +7,39 @@
     <name>LeanFT JUnit Test</name>
     <description>LeanFT JUnit Test</description>
 
+    <properties>
+        <lft.ver>14.2.0</lft.ver>
+        <junit.ver>4.12</junit.ver>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.ver}</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>sdk</artifactId>
-            <version>14.2.0</version>
+            <version>${lft.ver}</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>report</artifactId>
-            <version>14.2.0</version>
+            <version>${lft.ver}</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>unittesting</artifactId>
-            <version>14.2.0</version>
+            <version>${lft.ver}</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>verifications</artifactId>
-            <version>14.2.0</version>
+            <version>${lft.ver}</version>
         </dependency>
 
     </dependencies>
@@ -49,6 +53,7 @@
     </repositories>
 
     <build>
+        <testSourceDirectory>src/main/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <!-- This plugin is key to create a LFT Maven project to have the jar file
