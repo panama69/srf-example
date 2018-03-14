@@ -53,7 +53,7 @@
     </repositories>
 
     <build>
-        <!--testSourceDirectory>src/main/java</testSourceDirectory-->
+        <testSourceDirectory>src/main/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <!-- This plugin is key to create a LFT Maven project to have the jar file
@@ -66,6 +66,8 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <finalName>${project.artifactId}-${project.version}-with-lft-${lft.ver}</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
                 <executions>
                     <execution>

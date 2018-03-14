@@ -45,7 +45,7 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("SPAN").build());
         Verify.areEqual("TABLETS", tABLETSLink.getInnerText());
         Assert.assertEquals("My tst", "TABLETS", tABLETSLink.getInnerText());
-        browser.closeAllTabs();
+        browser.close();
     }
 
 }
