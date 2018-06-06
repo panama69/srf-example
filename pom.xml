@@ -8,7 +8,7 @@
     <description>LeanFT JUnit Test</description>
 
     <properties>
-        <lft.ver>14.2.0</lft.ver>
+        <lft.ver>14.3.0</lft.ver>
         <junit.ver>4.12</junit.ver>
     </properties>
     <dependencies>
@@ -53,7 +53,7 @@
     </repositories>
 
     <build>
-        <!--testSourceDirectory>src/main/java</testSourceDirectory-->
+        <testSourceDirectory>src/main/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <!-- This plugin is key to create a LFT Maven project to have the jar file

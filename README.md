@@ -20,6 +20,18 @@ mvn clean package
 The **srf-example-0.1-jar-with-dependencies.jar** is the file you will use to upload to StormRunner Functional.
 For convenience, **srf-example-0.1-jar-with-dependencies.jar** is part of the project if you don't wish to compile the test.
 
+
+**NOTE:** If you wish to run the test as a SRF Remote Test, run the maven project using:
+```
+clean test -DrunRemote=true
+```
+From Intellij, you can do that using the "Execute Maven Goal" button and entering the value in the window that pops up.
+
+If you are running from the commandline, then use:
+```
+mvn clean test -DrunRemote=true
+```
+
 ## Background
 If you change the name of the class from LeanFtTest **OR** the package net.mf, you will need to update the descriptor.json file to reflect those changes.  Instructions can be found on the [StormRunner Functional](https://admhelp.microfocus.com/srf/en/1.30/Content/Upload-asset.htm) help pages.
 

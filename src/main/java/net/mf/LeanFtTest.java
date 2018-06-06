@@ -38,7 +38,27 @@ public class LeanFtTest extends UnitTestClassBase {
 
     @Test
     public void test() throws GeneralLeanFtException {
-        Browser browser = BrowserFactory.launch(BrowserType.CHROME);
+        Browser browser;
+        String runRemote;
+        String tags[] = {"flynn","corndog","remote"};
+
+        // To execute the test as a remote SRF test, execute the maven project using the following:
+        // clean test -DrunRemote=true
+        runRemote = System.getProperty("runRemote");
+        if (runRemote != null && runRemote.contentEquals("true")){
+            BrowserDescription bd = new BrowserDescription();
+            //bd.setType(BrowserType.INTERNET_EXPLORER); //or: bd.set("type", BrowserType.INTERNET_EXPLORER) or: bd.set("type", "INTERNET_EXPLORER")
+            bd.setType(BrowserType.CHROME);
+            bd.set("version", "latest");
+            bd.set("osType", "Windows");
+            bd.set("osVersion", "10");
+            bd.set("testName", "SRF Remote Execution");
+            bd.set("tags",tags);
+            browser = SrfLab.launchBrowser(bd);
+
+        }else {
+            browser = BrowserFactory.launch(BrowserType.CHROME);
+        }
         browser.navigate("http://www.advantageonlineshopping.com");
         Link tABLETSLink = browser.describe(Link.class, new LinkDescription.Builder()
                 .innerText("TABLETS")
